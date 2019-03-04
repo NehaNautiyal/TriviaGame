@@ -1,0 +1,31 @@
+body {
+    background-image: url("../images/chemistry-wallpaper-b-w.jpg");
+}
+
+.container {
+    background: plum;
+    overflow: auto; 
+    clear: both;
+    border: 5px solid whitesmoke;
+    margin-top: 50px;
+    height: 60vh;
+}
+
+h1 {
+    font-family: 'Work Sans', sans-serif;
+    text-align: center;
+    text-decoration: underline;
+    
+}
+
+#start {
+    font-family: 'Work Sans', sans-serif;
+    text-align: center;
+    border: 2px solid black;
+    margin-top: 3.5em;
+    margin-left: auto;
+    margin-right: auto;
+    width: 40%;
+    background: gray;
+    color: whitesmoke;
+}
