@@ -17,31 +17,31 @@ $(document).ready(function () {
     //_____________________________________________________________________________________
     var questionObject = [
         {
-            question: "question 1",
-            choices: ["a", "b", "c", "d"],
+            question: "What is the common name for sodium chloride?",
+            choices: ["A) Table Salt", "B) Baking Soda", "C) Rubbing Alcohol", "D) Cream of Tartar"],
             answer: "a",
-            correctText: "a. Salt",
+            correctText: "A) Table Salt. <br> Did you know that every cell in the body contains salt? An adult contains about 250 grams of salt.",
             incorrect: "incorrect choice picked",
             timesUp: "time's up response",
             image: "assets/images/salt.jpg"
         },
         {
-            question: "question 2",
-            choices: ["b", "c", "d", "a"],
+            question: "What is the common name for glucose?",
+            choices: ["A) Chalk", "B) Table Sugar", "C) Borax", "D) Baking Powder"],
             answer: "b",
-            correctText: "b. Sugar",
+            correctText: "B) Sugar. There are 2 other types of sugar: fructose and sucrose.",
             incorrect: "incorrect choice picked",
             timesUp: "time's up response",
             image: "assets/images/sugar.jpg"
         },
         {
-            question: "question 3",
-            choices: ["a", "b", "c", "d"],
+            question: "What is the common name for magnesium sulfate heptahydrate?",
+            choices: ["A) Table Salt", "B) Borax", "C) Baking Soda", "D) Epsom Salt"],
             answer: "d",
-            correctText: "d. Baking Soda",
+            correctText: "D) Epsom Salt. Epsom Salts soothe achy muscles. Try soaking in 1 cup of epsom salt in a tub of water.",
             incorrect: "incorrect choice picked",
             timesUp: "time's up response",
-            image: "assets/images/baking-soda.jpg"
+            image: "assets/images/epsom-salt.jpeg"
         }
     ]
     //_____________________________________________________________________________________
@@ -50,7 +50,7 @@ $(document).ready(function () {
     // console.log(questionObject.question1.timesUp);
     //_____________________________________________________________________________________
     //Initialize some variables
-    var currentTime = 5
+    var currentTime = 30;
     var countdown = false;
     var questionsLeft = 3;
     var whichQuestion = 0;
@@ -67,7 +67,7 @@ $(document).ready(function () {
     //_____________________________________________________________________________________
     function startTime() {
         if (!countdown) {
-            currentTime = 5;
+            currentTime = 30;
             intervalId = setInterval(timer, 1000);
         } else {
             $("#timeRemaining").html(`<h3>Time Remaining: ${currentTime}</h3>`);
@@ -172,13 +172,13 @@ $(document).ready(function () {
                 //execute function for correct Answer
                 stopTime();
                 correctAnswer();
-                setTimeout(nextQuestion, 1000*3);
+                setTimeout(nextQuestion, 1000*4);
             } else {
                 console.log("wrong answer");
                 //else execute function for incorrect answer
                 stopTime();
                 incorrectAnswer();
-                setTimeout(nextQuestion, 1000*3);
+                setTimeout(nextQuestion, 1000*4);
             }
     });
     //_____________________________________________________________________________________
@@ -191,7 +191,8 @@ $(document).ready(function () {
     function correctAnswer() {
         $("button").hide();
         numCorrectQuestions++;
-        $("#question").html('<h3>You answered correctly!</h3>');
+        $("#question").html('<h2>You answered correctly!</h2>');
+        $("#question").append(`'<h2>The correct answer is ${questionObject[whichQuestion].correctText}</h2>'`);
         showImage();
 
 
@@ -224,7 +225,7 @@ $(document).ready(function () {
         showImage();
         $(".answerChoices").empty();
         //after a certain amount of time
-        setTimeout(nextQuestion, 1000*3);
+        setTimeout(nextQuestion, 1000*4);
     }
     //_____________________________________________________________________________________
     function showImage() {

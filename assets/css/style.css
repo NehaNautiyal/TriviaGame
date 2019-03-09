@@ -3,12 +3,12 @@ body {
 }
 
 .container {
-    background: plum;
+    background: #FBB6FB;
     overflow: auto; 
     clear: both;
     border: 5px solid whitesmoke;
     margin-top: 50px;
-    height: 80vh;
+    height: 85vh;
 }
 
 h1 {
@@ -21,6 +21,10 @@ h1 {
 h2, h3, p {
     font-family: 'Work Sans', sans-serif;
     text-align: center;
+}
+
+p {
+    font-size: 1.5em;
 }
 
 #start {
@@ -39,19 +43,23 @@ h2, h3, p {
     background: plum;
 }
 
-button {
-    background: gray;
+button, btn {
+    background: #B9B8B8
     display: flex;
-    margin-left: auto;
-    margin-right: auto;
-    font: whitesmoke;
+    justify-content: center;
+    color: whitesmoke;
     margin-bottom: 10px;
     width: 35%;
 }
 
+.btn-outline-secondary {
+    color: black;
+    border-color: #595858;
+}
+
 img {
-    height: 200px;
-    width: 200px;
+    height: 300px;
+    width: 300px;
     display: flex;
     margin-left: auto;
     margin-right: auto;
