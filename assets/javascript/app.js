@@ -1,20 +1,6 @@
 $(document).ready(function () {
 
-    // var chemistryQAs = [
-    //     question1: {
-    //         Question: "What is the common name for sodium chloride?",
-    //         Answer: "Table Salt",
-    //         Choice1: "Baking Soda",
-    //         Choice2: "Baking Powder",
-    //         Choice3: "Table Sugar"
-    //     },
-    //     question2: {
-    //         Question: "What is the common name for sodium bicarbonate?",
-    //         Answer: "Table Salt",
-    //         Choices: ["Baking Soda", "Baking Powder", "Table Sugar"]
-    //         }  
-    //     ]
-    //_____________________________________________________________________________________
+
     var questionObject = [
         {
             question: "What is the common name for sodium chloride?",
@@ -42,7 +28,62 @@ $(document).ready(function () {
             incorrect: "incorrect choice picked",
             timesUp: "time's up response",
             image: "assets/images/epsom-salt.jpeg"
-        }
+        },
+        {
+            question: "What is the common name for sodium bicarbonate?",
+            choices: ["A) Baking Soda", "B) Borax", "C) Baking Soda", "D) Epsom Salt"],
+            answer: "a",
+            correctText: "A) Baking Soda. ",
+            incorrect: "incorrect choice picked",
+            timesUp: "time's up response",
+            image: "assets/images/baking-soda.jpeg"
+        },
+        {
+            question: "What is the common name for nitrogen dioxide?",
+            choices: ["A) Table Salt", "B) Laughing Gas", "C) Baking Soda", "D) Epsom Salt"],
+            answer: "b",
+            correctText: "B) Laughing Gas. ",
+            incorrect: "incorrect choice picked",
+            timesUp: "time's up response",
+            image: "assets/images/laughing-gas.jpeg"
+        },
+        {
+            question: "What is the common name for calcium carbonate?",
+            choices: ["A) Table Salt", "B) Borax", "C) Chalk", "D) Epsom Salt"],
+            answer: "c",
+            correctText: "C) Chalk. ",
+            incorrect: "incorrect choice picked",
+            timesUp: "time's up response",
+            image: "assets/images/chalk.jpeg"
+        },
+        {
+            question: "What is the common name for sodium hypochlorite?",
+            choices: ["A) Table Salt", "B) Borax", "C) Baking Soda", "D) Epsom Salt"],
+            answer: "a",
+            correctText: "A) Liquid Bleach. ",
+            incorrect: "incorrect choice picked",
+            timesUp: "time's up response",
+            image: "assets/images/liquid-bleach.jpeg"
+        },
+        {
+            question: "What is the common name for potassium hydrogen tartrate?",
+            choices: ["A) Epsom Salt", "B) Tartrate Powder", "C) Tartric Acid", "D) Cream of Tartar"],
+            answer: "d",
+            correctText: "D) Cream of Tartar. ",
+            incorrect: "incorrect choice picked",
+            timesUp: "time's up response",
+            image: "assets/images/cream-of-tartar.jpeg"
+        },
+        {
+            question: "What is the common name for isopropyl alcochol?",
+            choices: ["A) Borax", "B) Rubbing Alcohol", "C) Vodka", "D) Grain Alcohol"],
+            answer: "b",
+            correctText: "B) Rubbing Alcohol. ",
+            incorrect: "incorrect choice picked",
+            timesUp: "time's up response",
+            image: "assets/images/rubbing-alcohol.jpeg"
+        },
+        
     ]
     //_____________________________________________________________________________________
     console.log(questionObject[0].question);
@@ -52,17 +93,17 @@ $(document).ready(function () {
     //Initialize some variables
     var currentTime = 30;
     var countdown = false;
-    var questionsLeft = 3;
+    var questionsLeft = 9;
     var whichQuestion = 0;
     var intervalId;
     var numCorrectQuestions = 0;
     var numIncorrectQuestions = 0;
     var numUnansweredQuestions = 0;
-    var answerChoicePicked = false;
     //_____________________________________________________________________________________
 
     $("button").hide();
     $("img").hide();
+    $(".card").hide();
 
     //_____________________________________________________________________________________
     function startTime() {
@@ -94,21 +135,22 @@ $(document).ready(function () {
     function displayQuestion(number) {
         if (questionsLeft > 0) {
             // $("button").show();
+            $(".card").show();
             $("#question").html(`<p>${questionObject[number].question}</p>`);
             questionsLeft--;
         } else if (questionsLeft === 0) {
             $("img").hide();
-            $("button").show();
+            $("li").hide();
+            // $("button").show();
             stopTime();
             $(".answerChoices").empty();
             $("#question").html(`<p>No more questions!<p>`);
             console.log("# Correct: " + numCorrectQuestions);
             console.log("# Incorrect: " + numIncorrectQuestions);
             console.log("# Unanswered: " + numUnansweredQuestions);
-            $("#choice-1").html(`<p>You answered ${numCorrectQuestions} questions correctly!</p>`);
-            $("#choice-2").html(`<p>You answered ${numIncorrectQuestions} questions incorrecty...</p>`);
-            $("#choice-3").html(`<p>You did not answer ${numUnansweredQuestions} questions.<p>`)
-            $("#choice-4 button").hide();
+            $("#numCorrect").html(`<p>You answered ${numCorrectQuestions} questions correctly!</p>`);
+            $("#numIncorrect").html(`<p>You answered ${numIncorrectQuestions} questions incorrecty...</p>`);
+            $("#numUnanswered").html(`<p>You did not answer ${numUnansweredQuestions} questions.<p>`)
             $(".reset").show().html(`<br><p>Click Here to Play again!<p>`)
             // $("#choice-4").removeClass("answerChoices").addClass("reset");
         }
@@ -191,8 +233,8 @@ $(document).ready(function () {
     function correctAnswer() {
         $("button").hide();
         numCorrectQuestions++;
-        $("#question").html('<h2>You answered correctly!</h2>');
-        $("#question").append(`'<h2>The correct answer is ${questionObject[whichQuestion].correctText}</h2>'`);
+        $("#question").html('<h4>You answered correctly!</h4>');
+        $("#question").append(`<h4>The correct answer is ${questionObject[whichQuestion].correctText}</h4>`);
         showImage();
 
 
@@ -202,8 +244,8 @@ $(document).ready(function () {
     function incorrectAnswer() {
         $("button").hide();
         numIncorrectQuestions++;
-        $("#question").html('<h3>That was incorrect.</h3>');
-        $("#question").append(`<br><h3>The correct answer is ${questionObject[whichQuestion].correctText}.</h3>`);
+        $("#question").html('<h4>That was incorrect.</h4>');
+        $("#question").append(`<br><h4>The correct answer is ${questionObject[whichQuestion].correctText}.</h4>`);
         showImage();
     }
     //_____________________________________________________________________________________
@@ -257,7 +299,7 @@ $(document).ready(function () {
         numCorrectQuestions = 0;
         numIncorrectQuestions = 0;
         numUnansweredQuestions = 0;
-        questionsLeft = 3;
+        questionsLeft = 9;
         countdown = false;
         whichQuestion = 0;
         startTime();

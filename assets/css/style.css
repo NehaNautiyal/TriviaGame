@@ -3,12 +3,12 @@ body {
 }
 
 .container {
-    background: #FBB6FB;
+    background: purple;
     overflow: auto; 
     clear: both;
     border: 5px solid whitesmoke;
     margin-top: 50px;
-    height: 85vh;
+    height: 90vh;
 }
 
 h1 {
@@ -18,7 +18,7 @@ h1 {
     
 }
 
-h2, h3, p {
+h2, h3, p, h4 {
     font-family: 'Work Sans', sans-serif;
     text-align: center;
 }
@@ -44,10 +44,10 @@ p {
 }
 
 button, btn {
-    background: #B9B8B8
+    background: gray;
     display: flex;
     justify-content: center;
-    color: whitesmoke;
+    color: purple;
     margin-bottom: 10px;
     width: 35%;
 }
@@ -61,6 +61,24 @@ img {
     height: 300px;
     width: 300px;
     display: flex;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.card {
+    margin-left: auto;
+    margin-right: auto;
+    /* background: purple; */
+    font: whitesmoke;
+}
+
+ul, li {
+    list-style: none;
+}
+
+.reset {
+    display: flex;
+    justify-content: center;
     margin-left: auto;
     margin-right: auto;
 }
