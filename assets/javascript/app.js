@@ -88,7 +88,7 @@ $(document).ready(function () {
     //_____________________________________________________________________________________
 
     //Initialize some variables
-    var currentTime = 30;
+    var currentTime = 31;
     var countdown = false;
     var questionsLeft = 9;
     var whichQuestion = 0;
@@ -105,7 +105,7 @@ $(document).ready(function () {
     //_____________________________________________________________________________________
     function startTime() {
         if (!countdown) {
-            currentTime = 30;
+            currentTime = 31;
             intervalId = setInterval(timer, 1000);
         } else {
             $("#timeRemaining").html(`<h3>Time Remaining: ${currentTime}</h3>`);
@@ -286,7 +286,7 @@ $(document).ready(function () {
         $(".reset").hide();
         $(".status").hide();
         $("li").show();
-        currentTime = 5;
+        currentTime = 31;
         numCorrectQuestions = 0;
         numIncorrectQuestions = 0;
         numUnansweredQuestions = 0;
