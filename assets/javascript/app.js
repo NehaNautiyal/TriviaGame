@@ -211,13 +211,13 @@ $(document).ready(function () {
             //execute function for correct Answer
             stopTime();
             correctAnswer();
-            setTimeout(nextQuestion, 1000 * 5);
+            setTimeout(nextQuestion, 1000 * 7);
         } else {
             console.log("wrong answer");
             //else execute function for incorrect answer
             stopTime();
             incorrectAnswer();
-            setTimeout(nextQuestion, 1000 * 5);
+            setTimeout(nextQuestion, 1000 * 7);
         }
     });
     //_____________________________________________________________________________________
@@ -259,7 +259,7 @@ $(document).ready(function () {
         showImage();
         $(".answerChoices").empty();
         //after a certain amount of time
-        setTimeout(nextQuestion, 1000 * 5);
+        setTimeout(nextQuestion, 1000 * 7);
     }
     //_____________________________________________________________________________________
     function showImage() {
