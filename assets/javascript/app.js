@@ -90,7 +90,7 @@ $(document).ready(function () {
     //Initialize some variables
     var currentTime = 30;
     var countdown = false;
-    var questionsLeft = 1;
+    var questionsLeft = 9;
     var whichQuestion = 0;
     var intervalId;
     var numCorrectQuestions = 0;
@@ -290,7 +290,7 @@ $(document).ready(function () {
         numCorrectQuestions = 0;
         numIncorrectQuestions = 0;
         numUnansweredQuestions = 0;
-        questionsLeft = 1;
+        questionsLeft = 9;
         countdown = false;
         whichQuestion = 0;
         startTime();
