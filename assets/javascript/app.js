@@ -15,7 +15,7 @@ $(document).ready(function () {
             question: "What is the common name for glucose?",
             choices: ["A) Chalk", "B) Table Sugar", "C) Borax", "D) Baking Powder"],
             answer: "b",
-            correctText: "B) Sugar. There are 2 other types of sugar: fructose and sucrose.",
+            correctText: "B) Sugar. The level of normal glucose inside the body is between 70-100. It is an important source of energy.",
             incorrect: "incorrect choice picked",
             timesUp: "time's up response",
             image: "assets/images/sugar.jpg"
@@ -31,45 +31,45 @@ $(document).ready(function () {
         },
         {
             question: "What is the common name for sodium bicarbonate?",
-            choices: ["A) Baking Soda", "B) Borax", "C) Baking Soda", "D) Epsom Salt"],
+            choices: ["A) Baking Soda", "B) Borax", "C) Baking Powder", "D) Epsom Salt"],
             answer: "a",
-            correctText: "A) Baking Soda. ",
+            correctText: "A) Baking Soda. Baking soda is often used to increase the volume and lighten the texture of baked goods. There are two types: fast-acting and slow-acting.",
             incorrect: "incorrect choice picked",
             timesUp: "time's up response",
-            image: "assets/images/baking-soda.jpeg"
+            image: "assets/images/baking-soda.jpg"
         },
         {
-            question: "What is the common name for nitrogen dioxide?",
+            question: "What is the common name for nitrous dioxide?",
             choices: ["A) Table Salt", "B) Laughing Gas", "C) Baking Soda", "D) Epsom Salt"],
             answer: "b",
-            correctText: "B) Laughing Gas. ",
+            correctText: "B) Laughing Gas. It is commonly use in dental procedures as it causes no harm to the body, can be breathed in, and wears off without any hangover effects.",
             incorrect: "incorrect choice picked",
             timesUp: "time's up response",
-            image: "assets/images/laughing-gas.jpeg"
+            image: "assets/images/laughing-gas.jpg"
         },
         {
-            question: "What is the common name for calcium carbonate?",
-            choices: ["A) Table Salt", "B) Borax", "C) Chalk", "D) Epsom Salt"],
+            question: "What is the common name for calcium sulfate?",
+            choices: ["A) Table Salt", "B) Baking Powder", "C) Chalk", "D) Freon"],
             answer: "c",
-            correctText: "C) Chalk. ",
+            correctText: "C) Chalk. It is derived from the natural mineral, gypsum, which is harder and less dusty than calcium carbonate.",
             incorrect: "incorrect choice picked",
             timesUp: "time's up response",
-            image: "assets/images/chalk.jpeg"
+            image: "assets/images/chalk.jpg"
         },
         {
             question: "What is the common name for sodium hypochlorite?",
-            choices: ["A) Table Salt", "B) Borax", "C) Baking Soda", "D) Epsom Salt"],
+            choices: ["A) Liquid Bleach", "B) Cream of Tartar", "C) Baking Soda", "D) Epsom Salt"],
             answer: "a",
-            correctText: "A) Liquid Bleach. ",
+            correctText: "A) Liquid Bleach. It is a strong oxidizing agent and is used to kill bacteria and remove stains from clothing. Not cotton though! It will eat away its fibers.",
             incorrect: "incorrect choice picked",
             timesUp: "time's up response",
-            image: "assets/images/liquid-bleach.jpeg"
+            image: "assets/images/liquid-bleach.jpg"
         },
         {
             question: "What is the common name for potassium hydrogen tartrate?",
-            choices: ["A) Epsom Salt", "B) Tartrate Powder", "C) Tartric Acid", "D) Cream of Tartar"],
+            choices: ["A) Limestone", "B) Tartrate Powder", "C) Tartric Acid", "D) Cream of Tartar"],
             answer: "d",
-            correctText: "D) Cream of Tartar. ",
+            correctText: "D) Cream of Tartar. It is an odorless, white crystalline powder used in cooking for various uses. For example, to add to boiling vegetables to reduce discoloration.",
             incorrect: "incorrect choice picked",
             timesUp: "time's up response",
             image: "assets/images/cream-of-tartar.jpeg"
@@ -78,18 +78,15 @@ $(document).ready(function () {
             question: "What is the common name for isopropyl alcochol?",
             choices: ["A) Borax", "B) Rubbing Alcohol", "C) Vodka", "D) Grain Alcohol"],
             answer: "b",
-            correctText: "B) Rubbing Alcohol. ",
+            correctText: "B) Rubbing Alcohol. It is included in hand lotions and cosmetics, as well as in antifreeze. It has a drying effect on the skin due to its high vapor pressure.",
             incorrect: "incorrect choice picked",
             timesUp: "time's up response",
-            image: "assets/images/rubbing-alcohol.jpeg"
+            image: "assets/images/rubbing-alcohol.png"
         },
-        
+
     ]
     //_____________________________________________________________________________________
-    console.log(questionObject[0].question);
-    // console.log(questionObject.question1.choices[0]);
-    // console.log(questionObject.question1.timesUp);
-    //_____________________________________________________________________________________
+
     //Initialize some variables
     var currentTime = 30;
     var countdown = false;
@@ -134,16 +131,14 @@ $(document).ready(function () {
     //Function to display the questions
     function displayQuestion(number) {
         if (questionsLeft > 0) {
-            // $("button").show();
             $(".card").show();
             $("#question").html(`<p>${questionObject[number].question}</p>`);
             questionsLeft--;
         } else if (questionsLeft === 0) {
             $("img").hide();
-            $("li").hide();
-            // $("button").show();
             stopTime();
             $(".answerChoices").empty();
+            $("li").hide();
             $("#question").html(`<p>No more questions!<p>`);
             console.log("# Correct: " + numCorrectQuestions);
             console.log("# Incorrect: " + numIncorrectQuestions);
@@ -209,19 +204,19 @@ $(document).ready(function () {
         var yourChoice = $(this).val();
         console.log($(this).val());
         //if that answer choice matches the correct answer choice element for that particular question
-            if (yourChoice === questionObject[whichQuestion].answer) {
-                console.log("right answer");
-                //execute function for correct Answer
-                stopTime();
-                correctAnswer();
-                setTimeout(nextQuestion, 1000*4);
-            } else {
-                console.log("wrong answer");
-                //else execute function for incorrect answer
-                stopTime();
-                incorrectAnswer();
-                setTimeout(nextQuestion, 1000*4);
-            }
+        if (yourChoice === questionObject[whichQuestion].answer) {
+            console.log("right answer");
+            //execute function for correct Answer
+            stopTime();
+            correctAnswer();
+            setTimeout(nextQuestion, 1000 * 4);
+        } else {
+            console.log("wrong answer");
+            //else execute function for incorrect answer
+            stopTime();
+            incorrectAnswer();
+            setTimeout(nextQuestion, 1000 * 4);
+        }
     });
     //_____________________________________________________________________________________
 
@@ -236,8 +231,6 @@ $(document).ready(function () {
         $("#question").html('<h4>You answered correctly!</h4>');
         $("#question").append(`<h4>The correct answer is ${questionObject[whichQuestion].correctText}</h4>`);
         showImage();
-
-
     }
     //_____________________________________________________________________________________
 
@@ -249,10 +242,7 @@ $(document).ready(function () {
         showImage();
     }
     //_____________________________________________________________________________________
-
-
-
-    //_____________________________________________________________________________________
+    //function to run when time runs out
     function timesUp() {
         $("button").hide();
         numUnansweredQuestions++;
@@ -263,29 +253,26 @@ $(document).ready(function () {
         //"Time's up"
         $("#timeRemaining").html('<p>Time\'s Up!</p>');
         //"The correct answer was: " correct answer
-        $("#question").html(`<p>The correct answer was:  ${questionObject[whichQuestion].answer}</p>`);
+        $("#question").html(`<p>The correct answer was: ${questionObject[whichQuestion].correctText}</p>`);
         showImage();
         $(".answerChoices").empty();
         //after a certain amount of time
-        setTimeout(nextQuestion, 1000*4);
+        setTimeout(nextQuestion, 1000 * 5);
     }
     //_____________________________________________________________________________________
     function showImage() {
         // Image shown
         $("img").show();
         console.log(questionObject[whichQuestion].image);
-        // $("img").attr("src", `"${questionObject[whichQuestion].image}"`);
         $("img").attr("src", questionObject[whichQuestion].image);
-        // $("img").attr("src", "assets/images/salt.jpg");
     }
     //_____________________________________________________________________________________
     function nextQuestion() {
         whichQuestion++;
-        // setTimeout(function () {
-            startTime(); displayQuestion(whichQuestion); displayAnswerChoices(whichQuestion);
-        // }, 1000 * 3);
+        startTime();
+        displayQuestion(whichQuestion);
+        displayAnswerChoices(whichQuestion);
         $("img").hide();
-        // showStatus();
         //next question automatically appears 
         //countdown restarts at 30 seconds 
         //countdown decrements
@@ -305,7 +292,6 @@ $(document).ready(function () {
         startTime();
         displayQuestion(whichQuestion);
         displayAnswerChoices(whichQuestion);
-
     }
     // _____________________________________________________________________________________
     //when you click an answer
@@ -322,10 +308,6 @@ $(document).ready(function () {
     //answer choices shown
 
     //if the answer choice was correct
-    //
-
-
-
 
     //if questionsLeft = 0, 
     //"All done, here's how you did"
@@ -339,9 +321,5 @@ $(document).ready(function () {
     //countdown going down
 
     //use card for each question 
-
-
-
-
 
 });

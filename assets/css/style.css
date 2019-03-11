@@ -23,6 +23,10 @@ h2, h3, p, h4 {
     text-align: center;
 }
 
+h1, h3, #timeRemaining, .status {
+    color: whitesmoke;
+}
+
 p {
     font-size: 1.5em;
 }
@@ -39,9 +43,6 @@ p {
     color: whitesmoke;
 }
 
-#answerChoices:hover {
-    background: plum;
-}
 
 button, btn {
     background: gray;
@@ -52,10 +53,16 @@ button, btn {
     width: 35%;
 }
 
+.btn-outline-secondary:hover {
+    background: purple;
+}
+
 .btn-outline-secondary {
     color: black;
-    border-color: #595858;
+    border-color: purple;
+    background: whitesmoke;
 }
+
 
 img {
     height: 300px;
@@ -70,6 +77,10 @@ img {
     margin-right: auto;
     /* background: purple; */
     font: whitesmoke;
+}
+
+.list-group {
+    background: gray;
 }
 
 ul, li {
