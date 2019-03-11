@@ -209,13 +209,13 @@ $(document).ready(function () {
             //execute function for correct Answer
             stopTime();
             correctAnswer();
-            setTimeout(nextQuestion, 1000 * 4);
+            setTimeout(nextQuestion, 1000 * 5);
         } else {
             console.log("wrong answer");
             //else execute function for incorrect answer
             stopTime();
             incorrectAnswer();
-            setTimeout(nextQuestion, 1000 * 4);
+            setTimeout(nextQuestion, 1000 * 5);
         }
     });
     //_____________________________________________________________________________________
