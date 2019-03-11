@@ -23,8 +23,12 @@ h2, h3, p, h4 {
     text-align: center;
 }
 
-h1, h3, #timeRemaining, .status {
+h1, h3, #timeRemaining, .status, #instructions {
     color: whitesmoke;
+}
+
+#instructions {
+    margin-top: 1em;
 }
 
 p {
@@ -35,7 +39,7 @@ p {
     font-family: 'Work Sans', sans-serif;
     text-align: center;
     border: 2px solid black;
-    margin-top: 3.5em;
+    margin-top: 2.5em;
     margin-left: auto;
     margin-right: auto;
     width: 40%;
@@ -92,4 +96,5 @@ ul, li {
     justify-content: center;
     margin-left: auto;
     margin-right: auto;
+    margin-top: 1.5em;
 }

@@ -6,7 +6,7 @@ $(document).ready(function () {
             question: "What is the common name for sodium chloride?",
             choices: ["A) Table Salt", "B) Baking Soda", "C) Rubbing Alcohol", "D) Cream of Tartar"],
             answer: "a",
-            correctText: "A) Table Salt. <br> Did you know that every cell in the body contains salt? An adult contains about 250 grams of salt.",
+            correctText: "A) Table Salt. <br> Did you know that every cell in the body contains salt? An adult contains about 250 grams of salt",
             incorrect: "incorrect choice picked",
             timesUp: "time's up response",
             image: "assets/images/salt.jpg"
@@ -15,52 +15,52 @@ $(document).ready(function () {
             question: "What is the common name for glucose?",
             choices: ["A) Chalk", "B) Table Sugar", "C) Borax", "D) Baking Powder"],
             answer: "b",
-            correctText: "B) Sugar. The level of normal glucose inside the body is between 70-100. It is an important source of energy.",
+            correctText: "B) Sugar. The level of normal glucose inside the body is between 70-100. It is an important source of energy",
             incorrect: "incorrect choice picked",
             timesUp: "time's up response",
             image: "assets/images/sugar.jpg"
         },
         {
             question: "What is the common name for magnesium sulfate heptahydrate?",
-            choices: ["A) Table Salt", "B) Borax", "C) Baking Soda", "D) Epsom Salt"],
+            choices: ["A) Milk of Magnesia", "B) Borax", "C) Baking Soda", "D) Epsom Salt"],
             answer: "d",
-            correctText: "D) Epsom Salt. Epsom Salts soothe achy muscles. Try soaking in 1 cup of epsom salt in a tub of water.",
+            correctText: "D) Epsom Salt. Epsom Salts soothe achy muscles. Try soaking in 1 cup of epsom salt in a tub of water",
             incorrect: "incorrect choice picked",
             timesUp: "time's up response",
             image: "assets/images/epsom-salt.jpeg"
         },
         {
             question: "What is the common name for sodium bicarbonate?",
-            choices: ["A) Baking Soda", "B) Borax", "C) Baking Powder", "D) Epsom Salt"],
+            choices: ["A) Baking Soda", "B) Borax", "C) Baking Powder", "D) Chalk"],
             answer: "a",
-            correctText: "A) Baking Soda. Baking soda is often used to increase the volume and lighten the texture of baked goods. There are two types: fast-acting and slow-acting.",
+            correctText: "A) Baking Soda. Baking soda is often used to increase the volume and lighten the texture of baked goods. There are two types: fast-acting and slow-acting",
             incorrect: "incorrect choice picked",
             timesUp: "time's up response",
             image: "assets/images/baking-soda.jpg"
         },
         {
             question: "What is the common name for nitrous dioxide?",
-            choices: ["A) Table Salt", "B) Laughing Gas", "C) Baking Soda", "D) Epsom Salt"],
+            choices: ["A) Milk of Magnesia", "B) Laughing Gas", "C) Borax", "D) Chalk"],
             answer: "b",
-            correctText: "B) Laughing Gas. It is commonly use in dental procedures as it causes no harm to the body, can be breathed in, and wears off without any hangover effects.",
+            correctText: "B) Laughing Gas. It is commonly use in dental procedures as it causes no harm to the body, can be breathed in, and wears off without any hangover effects",
             incorrect: "incorrect choice picked",
             timesUp: "time's up response",
             image: "assets/images/laughing-gas.jpg"
         },
         {
             question: "What is the common name for calcium sulfate?",
-            choices: ["A) Table Salt", "B) Baking Powder", "C) Chalk", "D) Freon"],
+            choices: ["A) Limestone", "B) Baking Powder", "C) Chalk", "D) Freon"],
             answer: "c",
-            correctText: "C) Chalk. It is derived from the natural mineral, gypsum, which is harder and less dusty than calcium carbonate.",
+            correctText: "C) Chalk. It is derived from the natural mineral, gypsum, which is harder and less dusty than calcium carbonate",
             incorrect: "incorrect choice picked",
             timesUp: "time's up response",
             image: "assets/images/chalk.jpg"
         },
         {
             question: "What is the common name for sodium hypochlorite?",
-            choices: ["A) Liquid Bleach", "B) Cream of Tartar", "C) Baking Soda", "D) Epsom Salt"],
+            choices: ["A) Liquid Bleach", "B) Cream of Tartar", "C) Baking Powder", "D) Rubbing Alcohol"],
             answer: "a",
-            correctText: "A) Liquid Bleach. It is a strong oxidizing agent and is used to kill bacteria and remove stains from clothing. Not cotton though! It will eat away its fibers.",
+            correctText: "A) Liquid Bleach. It is a strong oxidizing agent and is used to kill bacteria and remove stains from clothing. Not cotton though! It will eat away its fibers",
             incorrect: "incorrect choice picked",
             timesUp: "time's up response",
             image: "assets/images/liquid-bleach.jpg"
@@ -69,7 +69,7 @@ $(document).ready(function () {
             question: "What is the common name for potassium hydrogen tartrate?",
             choices: ["A) Limestone", "B) Tartrate Powder", "C) Tartric Acid", "D) Cream of Tartar"],
             answer: "d",
-            correctText: "D) Cream of Tartar. It is an odorless, white crystalline powder used in cooking for various uses. For example, to add to boiling vegetables to reduce discoloration.",
+            correctText: "D) Cream of Tartar. It is an odorless, white crystalline powder used in cooking for various uses. For example, to add to boiling vegetables to reduce discoloration",
             incorrect: "incorrect choice picked",
             timesUp: "time's up response",
             image: "assets/images/cream-of-tartar.jpeg"
@@ -78,7 +78,7 @@ $(document).ready(function () {
             question: "What is the common name for isopropyl alcochol?",
             choices: ["A) Borax", "B) Rubbing Alcohol", "C) Vodka", "D) Grain Alcohol"],
             answer: "b",
-            correctText: "B) Rubbing Alcohol. It is included in hand lotions and cosmetics, as well as in antifreeze. It has a drying effect on the skin due to its high vapor pressure.",
+            correctText: "B) Rubbing Alcohol. It is included in hand lotions and cosmetics, as well as in antifreeze. It has a drying effect on the skin due to its high vapor pressure",
             incorrect: "incorrect choice picked",
             timesUp: "time's up response",
             image: "assets/images/rubbing-alcohol.png"
@@ -90,7 +90,7 @@ $(document).ready(function () {
     //Initialize some variables
     var currentTime = 30;
     var countdown = false;
-    var questionsLeft = 9;
+    var questionsLeft = 1;
     var whichQuestion = 0;
     var intervalId;
     var numCorrectQuestions = 0;
@@ -139,6 +139,7 @@ $(document).ready(function () {
             stopTime();
             $(".answerChoices").empty();
             $("li").hide();
+            $(".status").show();
             $("#question").html(`<p>No more questions!<p>`);
             console.log("# Correct: " + numCorrectQuestions);
             console.log("# Incorrect: " + numIncorrectQuestions);
@@ -186,8 +187,9 @@ $(document).ready(function () {
     //_____________________________________________________________________________________
     //When Start button is pressed
     $("#start").on("click", function () {
-        //hide the start button
+        //hide the start button & instructions
         $("#start").hide();
+        $("#instructions").hide();
         startTime();
         displayQuestion(whichQuestion);
         displayAnswerChoices(whichQuestion);
@@ -229,7 +231,7 @@ $(document).ready(function () {
         $("button").hide();
         numCorrectQuestions++;
         $("#question").html('<h4>You answered correctly!</h4>');
-        $("#question").append(`<h4>The correct answer is ${questionObject[whichQuestion].correctText}</h4>`);
+        $("#question").append(`<h4>The correct answer is ${questionObject[whichQuestion].correctText}.</h4>`);
         showImage();
     }
     //_____________________________________________________________________________________
@@ -253,7 +255,7 @@ $(document).ready(function () {
         //"Time's up"
         $("#timeRemaining").html('<p>Time\'s Up!</p>');
         //"The correct answer was: " correct answer
-        $("#question").html(`<p>The correct answer was: ${questionObject[whichQuestion].correctText}</p>`);
+        $("#question").html(`<p>The correct answer was: ${questionObject[whichQuestion].correctText}.</p>`);
         showImage();
         $(".answerChoices").empty();
         //after a certain amount of time
@@ -282,11 +284,13 @@ $(document).ready(function () {
     function reset() {
         //reinitialize all variables: 
         $(".reset").hide();
+        $(".status").hide();
+        $("li").show();
         currentTime = 5;
         numCorrectQuestions = 0;
         numIncorrectQuestions = 0;
         numUnansweredQuestions = 0;
-        questionsLeft = 9;
+        questionsLeft = 1;
         countdown = false;
         whichQuestion = 0;
         startTime();
